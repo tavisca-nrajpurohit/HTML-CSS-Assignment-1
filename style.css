@@ -3,50 +3,113 @@
 }
 
 body {
-    margin: 0;
-    background-color: #ebebeba2;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.header {
-    background-color: #c5c5c5a2;
-    padding: 20px;
-    text-align: center;
+header {
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    background-color: rgb(226, 226, 226);
 }
 
-.footer {
-    background-color: #535353a2;
-    padding: 20px;
-    text-align: center;
-}
-
-.column {
+.tab {
     float: left;
-    padding: 10px;
-    text-align: center;
-}
-
-.column.sidebar {
+    width: 20%;
+    background: rgb(53, 85, 133);
     min-height: 500px;
-    width: 25%;
-    background-color: #49449ca2;
 }
 
-.column.main-body {
+article {
+    float: left;
+    padding: 20px;
+    width: 80%;
+    background-color: #e9ebff;
     min-height: 500px;
-    width: 75%;
-    background-color: #c5b8ff;
 }
 
-.row:after {
+section:after {
     content: "";
     display: table;
     clear: both;
 }
 
-@media screen and (max-width: 460px) {
-    .column.sidebar,
-    .column.main-body {
+footer {
+    background-color: rgb(41, 41, 41);
+    padding: 7px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#footer-text {
+    color: rgb(255, 255, 255);
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: cyan;
+}
+
+@media (max-width: 600px) {
+    .tab,
+    article {
         width: 100%;
-        min-height: 0px;
+        height: auto;
     }
+}
+
+#website-logo {
+    width: 30%;
+    float: left;
+}
+
+#website-name {
+    width: 70%;
+    float: left;
+    color: red;
+}
+
+img#logo {
+    max-width: 100px;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.tab button:hover {
+    background-color: #f1f1f1dc;
+}
+
+.tab button.active {
+    background-color: #e9ebff;
+    color: black;
+}
+
+.tabcontent {
+    display: none;
+    padding: 10px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    width: 70%;
+    text-align: left;
 }

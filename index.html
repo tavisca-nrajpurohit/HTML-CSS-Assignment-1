@@ -10,20 +10,100 @@
 </head>
 
 <body>
-    <div class="header">
-        <p>This is a Header.</p>
-    </div>
-    <div class="row">
-        <div class="column sidebar">
-            <p>This is Sidebar.</p>
+    <header>
+        <div id="website-logo">
+            <img src="resource/images/logo.png" id="logo" alt="Website Logo">
         </div>
-        <div class="column main-body">
-            <p>This is Main Body.</p>
+        <h3>To-Do List Website</h3>
+    </header>
+
+    <section>
+        <div class="tab">
+            <button class="tablinks active" onclick="openPage(event, 'todo')">To-Do List</button>
+            <button class="tablinks" onclick="openPage(event, 'userprofile')">User Profile</button>
+            <button class="tablinks" onclick="openPage(event, 'login')">Login</button>
         </div>
-    </div>
-    <div class="footer">
-        <p>This is a Footer.</p>
-    </div>
+
+        <article>
+            <div id="todo" class="tabcontent" style="display: block">
+                <h3>To-Do List: </h3><br>
+                <div class="container">
+                    <form action="">
+                        <input type="text" name="input" id="input">
+                        <button id="search">Search</button>
+                        <button id="add" type="submit">Add</button>
+                    </form>
+                    <br>
+                    <table>
+                        <tr>
+                            <td>1.</td>
+                            <td>File a Complaint.</td>
+                            <td><button class="delete">Delete</button></td>
+                            <td><button class="edit">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>File another Complaint.</td>
+                            <td><button class="delete">Delete</button></td>
+                            <td><button class="edit">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>File one more Complaint.</td>
+                            <td><button class="delete">Delete</button></td>
+                            <td><button class="edit">Edit</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="userprofile" class="tabcontent">
+                <div class="container">
+                    <img src="resource/images/profile.jpg" alt="User Profile Picture" id="profile-pic">
+                    <br><label>Name:</label> Neelesh Singh Rajpurohit
+                    <br><label>Phone:</label> 9971751205
+                    <br><label>Address:</label> Chennai, Tamil Nadu
+                </div>
+            </div>
+
+            <div id="login" class="tabcontent">
+                <div class="container">
+                    <h3>Login: </h3><br>
+                    <form action="">
+                        <label>Username:</label>
+                        <input type="text" name="username" id="username">
+                        <label>Password:</label>
+                        <input type="password" name="password" id="password">
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+            </div>
+
+
+    </section>
+
+    <footer>
+        <p>
+            <a href="index.html">Home</a> | <a href="about-us.html">About us</a> | <a href="contact-us.html">Contact us</a>
+        </p>
+        <p id="footer-text">&copy; Copyright 2019 | Developer: NSR</p>
+    </footer>
+
+    <script>
+        function openPage(evt, pageName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(pageName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 
 </html>
