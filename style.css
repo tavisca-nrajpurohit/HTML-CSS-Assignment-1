@@ -24,7 +24,7 @@ article {
     float: left;
     padding: 20px;
     width: 80%;
-    background-color: #e9ebff;
+    background-color: white;
     min-height: 500px;
 }
 
@@ -82,6 +82,7 @@ img#logo {
     border: none;
     outline: none;
     cursor: pointer;
+    font-style: oblique;
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
@@ -95,7 +96,7 @@ img#logo {
 }
 
 .tab button.active {
-    background-color: #e9ebff;
+    background-color: white;
     color: black;
 }
 
@@ -106,10 +107,52 @@ img#logo {
 
 .container {
     text-align: center;
+    font-size: 15px;
     width: 100%;
 }
 
 table {
     width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: left;
+}
+
+.login-element {
+    width: 50%;
+    padding: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.login-element label {
+    width: 30%;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+}
+
+.login-element input {
+    width: 60%;
+    float: right;
+    padding: 5px;
+    margin: 5px;
+}
+
+.login-element button {
+    width: 60%;
+    border: 0px;
+    float: right;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    background-color: green;
+}
+
+.login-element button:hover {
+    color: green;
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: green;
 }

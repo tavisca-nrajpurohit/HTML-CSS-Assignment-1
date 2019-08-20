@@ -26,7 +26,9 @@
 
         <article>
             <div id="todo" class="tabcontent" style="display: block">
-                <h3>To-Do List: </h3><br>
+                <h3>
+                    <center>To-Do List:</center>
+                </h3><br>
                 <div class="container">
                     <form action="">
                         <input type="text" name="input" id="input">
@@ -69,13 +71,23 @@
             <div id="login" class="tabcontent">
                 <div class="container">
                     <h3>Login: </h3><br>
-                    <form action="">
-                        <label>Username:</label>
-                        <input type="text" name="username" id="username">
-                        <label>Password:</label>
-                        <input type="password" name="password" id="password">
-                        <input type="submit" value="Login">
-                    </form>
+
+                    <div>
+                        <form action="">
+                            <div class="login-element">
+                                <label>Username:</label>
+                                <input type="text" name="username" id="username" required placeholder="username">
+                            </div>
+                            <div class="login-element">
+                                <label>Password:</label>
+                                <input type="password" name="password" id="password" required placeholder="password">
+                            </div>
+                            <div class="login-element">
+                                <label></label>
+                                <button id="submit" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
 
