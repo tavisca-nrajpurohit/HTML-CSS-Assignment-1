@@ -31,30 +31,20 @@
                 </h3><br>
                 <div class="container">
                     <form action="">
-                        <input type="text" name="input" id="input">
+                        <input type="text" name="form-todo" id="form-todo" required>
                         <button id="search">Search</button>
-                        <button id="add" type="submit">Add</button>
+                        <button id="add" onclick="addtolist(event)">Add</button>
                     </form>
                     <br>
-                    <table>
+                    <table id="todo-list">
+                        <!--
                         <tr>
                             <td>1.</td>
                             <td>File a Complaint.</td>
                             <td><button class="delete">Delete</button></td>
                             <td><button class="edit">Edit</button></td>
                         </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>File another Complaint.</td>
-                            <td><button class="delete">Delete</button></td>
-                            <td><button class="edit">Edit</button></td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>File one more Complaint.</td>
-                            <td><button class="delete">Delete</button></td>
-                            <td><button class="edit">Edit</button></td>
-                        </tr>
+                        -->
                     </table>
                 </div>
             </div>
@@ -116,6 +106,7 @@
             evt.currentTarget.className += " active";
         }
     </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
