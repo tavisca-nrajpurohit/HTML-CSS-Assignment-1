@@ -9,7 +9,7 @@ function addtolist(e) {
     tabledata1.innerHTML = ">>";
     tablerow.append(tabledata1);
     let tabledata2 = document.createElement('td');
-    tabledata2.id = todoIndex
+    tabledata2.id = todoIndex;
     tabledata2.innerHTML = formData.value;
     tablerow.append(tabledata2);
     let tabledata3 = document.createElement('td');
@@ -23,6 +23,7 @@ function addtolist(e) {
         formData.value = "";
     }
     todoIndex++;
+    resetColor();
 }
 
 function deleteFromList(e, id) {
@@ -35,4 +36,32 @@ function updateListItem(e, id) {
     e.preventDefault();
     let tabledata = document.getElementById(id);
     tabledata.innerHTML = prompt("Update To-do list Item", document.getElementById('form-todo').value)
+}
+
+function resetColor() {
+    for (var i = 0; i < todoIndex; i++) {
+        let temp = document.getElementById(i);
+
+        if (temp != null) {
+            temp.parentElement.style.color = "";
+        }
+    }
+}
+
+function search() {
+    let formData = document.getElementById("form-todo");
+    let str = formData.value;
+
+    for (var i = 0; i < todoIndex; i++) {
+        let temp = document.getElementById(i);
+
+        if (temp != null) {
+            if (temp.innerHTML.includes(str) && str != "") {
+                console.log("temp = " + temp.innerHTML);
+                temp.parentElement.style.backgroundColor = "yellow";
+            } else {
+                temp.parentElement.style.backgroundColor = "";
+            }
+        }
+    }
 }
