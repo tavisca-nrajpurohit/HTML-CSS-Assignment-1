@@ -120,7 +120,7 @@ table {
 
 .login-element {
     width: 50%;
-    padding: 10px;
+    padding: 5px;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -155,4 +155,9 @@ table {
     border: solid;
     border-width: 1px;
     border-color: green;
+}
+
+.login-element p {
+    padding: 5px;
+    margin: 5px;
 }

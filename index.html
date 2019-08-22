@@ -51,9 +51,22 @@
             <div id="userprofile" class="tabcontent">
                 <div class="container">
                     <img src="resource/images/profile.jpg" alt="User Profile Picture" id="profile-pic">
-                    <br><label>Name:</label> Neelesh Singh Rajpurohit
-                    <br><label>Phone:</label> 9971751205
-                    <br><label>Address:</label> Chennai, Tamil Nadu
+                    <p style="color=grey; font-size=10px;"><i><b>Note:</b> Click on the content to edit the content!</i></p>
+                    <div class="login-element">
+                        <label><b>Name:</b></label>
+                        <p id="profile-name" onclick="updateProfile(this);">Neelesh Singh Rajpurohit</p>
+                        <input type="text" onkeyup="saveData(event,this)" name="profile-name-input" id="profile-name-input" style="display:none;">
+                    </div>
+                    <div class="login-element">
+                        <label><b>Phone:</b></label>
+                        <p id="profile-phone" onclick="updateProfile(this);">9971751205</p>
+                        <input type="text" onkeyup="saveData(event,this)" name="profile-phone-input" id="profile-phone-input" style="display:none;">
+                    </div>
+                    <div class="login-element">
+                        <label><b>Address:</b></label>
+                        <p id="profile-address" onclick="updateProfile(this);">Chennai, Tamil Nadu</p>
+                        <input type="text" onkeyup="saveData(event,this)" name="profile-address-input" id="profile-address-input" style="display:none;">
+                    </div>
                 </div>
             </div>
 
