@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            border: solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="creato();" style="width: 250px; height:100px">Click to Create an object</button>
+    <h1 onmousemove="this.style.color=getRandomColor(); this.style.paddingTop = getRandomY(); this.style.paddingLeft = getRandomX(); this.style.left = getRandomX(); this.style.top = getRandomX();">O</h1>
+
+    <script>
+        function getRandomColor() {
+            var letters = '123456789ABCDE';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            if (color == "#ffffff")
+                color = "#112233";
+            return color;
+        }
+
+        function getRandomX() {
+            var num = Math.floor(Math.random() * 900);
+
+            var str = num + 'px';
+            return str;
+        }
+
+        function getRandomY() {
+            var num = Math.floor(Math.random() * 400);
+            var str = num + 'px';
+            return str;
+        }
+
+        function creato() {
+
+            document.body.innerHTML += '<h1 onmousemove="this.style.color=getRandomColor(); this.style.paddingTop = getRandomY(); this.style.paddingLeft = getRandomX(); this.style.left = getRandomX(); this.style.top = getRandomX(); " style="border: solid red;">O</h1>';
+        }
+    </script>
+</body>
+
+</html>
