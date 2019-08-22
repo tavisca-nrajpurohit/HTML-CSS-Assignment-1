@@ -161,3 +161,48 @@ table {
     padding: 5px;
     margin: 5px;
 }
+
+.delete {
+    border: 0px;
+    color: white;
+    padding: 3px;
+    border-width: 1px;
+    border-color: red;
+    border: solid;
+    background-color: red;
+}
+
+.delete:hover {
+    color: red;
+    background-color: white;
+}
+
+.edit {
+    border: 0px;
+    color: white;
+    padding: 3px;
+    border-width: 1px;
+    border: solid;
+    border-color: blue;
+    background-color: blue;
+}
+
+.edit:hover {
+    color: blue;
+    background-color: white;
+}
+
+.add {
+    border: 0px;
+    color: white;
+    padding: 3px;
+    border-width: 1px;
+    border: solid;
+    border-color: green;
+    background-color: green;
+}
+
+.add:hover {
+    color: green;
+    background-color: white;
+}

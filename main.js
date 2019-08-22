@@ -2,7 +2,7 @@ let todoIndex = 1;
 
 // Fetching content from External API - JSON-Placeholder
 // To limit the number of data elements to be fetched => set variable "NumberOfDataElements" below
-const NUMBER_OF_ELEMENTS = 10;
+const NUMBER_OF_ELEMENTS = 5;
 var profileName = "Neelesh Singh Rajpurohit";
 var profilePhone = "9971751205";
 var profileAddr = "Chennai, Tamil Nadu";
