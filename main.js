@@ -3,6 +3,9 @@ let todoIndex = 1;
 // Fetching content from External API - JSON-Placeholder
 // To limit the number of data elements to be fetched => set variable "NumberOfDataElements" below
 const NUMBER_OF_ELEMENTS = 10;
+var profileName = "Neelesh Singh Rajpurohit";
+var profilePhone = "9971751205";
+var profileAddr = "Chennai, Tamil Nadu";
 
 
 function initialSetup() {
@@ -99,7 +102,7 @@ function resetColor() {
 function search() {
     let formData = document.getElementById("form-todo");
     let str = formData.value;
-
+    str = str.trim();
     for (var i = 0; i < todoIndex; i++) {
         let temp = document.getElementById(i);
 
@@ -120,6 +123,17 @@ function updateProfile(elem) {
     let inputElement = document.getElementById(inputElementId);
     let oldData = elem.innerHTML;
     inputElement.value = oldData;
+    switch (elem.id) {
+        case "profile-name":
+            profileName = oldData;
+            break;
+        case "profile-phone":
+            profilePhone = oldData;
+            break;
+        case "profile-address":
+            profileAddr = oldData;
+            break;
+    }
     elem.style.display = "none";
     inputElement.style.display = "block";
 }
@@ -129,8 +143,24 @@ function saveData(event, inputElement) {
     if (event.keyCode === 13) {
         console.log("Function saveData triggered !");
         newData = inputElement.value;
+        newData = newData.trim();
         let elemId = inputElement.id;
         elemId = elemId.replace("-input", "");
+
+        if (newData == null || newData == "") {
+            alert("Input filed cannot be left blank");
+            switch (elemId) {
+                case "profile-name":
+                    newData = profileName;
+                    break;
+                case "profile-phone":
+                    newData = profilePhone;
+                    break;
+                case "profile-address":
+                    newData = profileAddr;
+                    break;
+            }
+        }
         let elem = document.getElementById(elemId);
         elem.innerHTML = newData;
 
